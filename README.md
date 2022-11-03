@@ -6,7 +6,7 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # [Day 3—Polygons](R/day_3_polygons)
 
-![Upheaval Domes](../../plots/day_3/titled_upheaval_dome.png)
+![Upheaval Domes](plots/day_3/titled_upheaval_dome.png)
 
 ## [Day 2—Lines](R/day_2_lines)
 
