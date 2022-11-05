@@ -4,7 +4,7 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
-# [Day 3—Green](R/day_4_green)
+# [Day 4—Green](R/day_4_green)
 
 ![Green Counties](plots/day_4/green_counties.png)
 
