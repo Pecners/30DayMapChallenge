@@ -1,1 +1,1 @@
-![Green Counties of America](plots/day_4/green_counties.png)
+![Green Counties of America](plots/day_4_green/green_counties.png)
