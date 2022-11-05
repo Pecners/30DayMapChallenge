@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+# [Day 3—green](R/day_4_green)
+
+![Green Counties](plots/day_4/green_counties.png)
+
 # [Day 3—Polygons](R/day_3_polygons)
 
 ![Upheaval Domes](plots/day_3/titled_upheaval_dome.png)
