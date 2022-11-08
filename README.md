@@ -4,7 +4,7 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
-## Day 7—Raster
+## [Day 7—Raster](R/day_7_raster)
 
 ![Lake Michigan](plots/day_7/titled_lake_michigan.png)
 
