@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 10—A bad map](R/day_10_bad_map)
+
+![A bad map](plots/day_10/bad_map.png)
+
 ## [Day 9—Space](R/day_9_space)
 
 ![Merging Galaxies](plots/day_9/merging_galaxies/titled_merging_galaxies.png)
