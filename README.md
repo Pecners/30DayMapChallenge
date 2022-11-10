@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 9—Space](R/day_9_space)
+
+![Merging Galaxies](plots/day_9/merging_galaxies/titled_merging_galaxies.png)
+
 ## [Day 7—Raster](R/day_7_raster)
 
 ![Lake Michigan](plots/day_7/titled_lake_michigan.png)
