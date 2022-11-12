@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 11—Color Friday: Red](R/day_11_red)
+
+![Red Eye](plots/day_11/titled_red_eye.png)
+
 ## [Day 10—A bad map](R/day_10_bad_map)
 
 ![A bad map](plots/day_10/bad_map.png)
