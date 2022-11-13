@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 13—5 Minute Map](R/day_13_5_minute)
+
+![Alton, Illinois](plots/day_13/alton.png)
+
 ## [Day 11—Color Friday: Red](R/day_11_red)
 
 ![Red Eye](plots/day_11/titled_red_eye.png)
