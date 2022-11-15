@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 14—Hexagon](R/day_14_hexagon)
+
+
+
 ## [Day 13—5 Minute Map](R/day_13_5_minute_map)
 
 ![Alton, Illinois](plots/day_13/alton.png)

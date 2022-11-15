@@ -8,3 +8,4 @@ data/ebd*
 *.DS_Store
 data/day_2*
 data/michigan*
+plots/day_14/tmp/*
