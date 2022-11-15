@@ -8,6 +8,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 
 
+https://user-images.githubusercontent.com/47727946/201817530-48bc8b81-1090-4833-9ac4-f8fb3ffb8d1a.mp4
+
+
+
 ## [Day 13—5 Minute Map](R/day_13_5_minute_map)
 
 ![Alton, Illinois](plots/day_13/alton.png)
