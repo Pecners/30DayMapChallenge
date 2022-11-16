@@ -4,6 +4,9 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 14—Hexagon (2nd Submission)](R/day_14_hexagon)
+
+
 ## [Day 14—Hexagon](R/day_14_hexagon)
 
 
