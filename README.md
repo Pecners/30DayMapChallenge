@@ -7,7 +7,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 ## [Day 14—Hexagon (2nd Submission)](R/day_14_hexagon)
 
 
-https://user-images.githubusercontent.com/47727946/202064010-c05053ba-93ee-465b-ab1a-6909f59a1d6f.mp4
+
+
+https://user-images.githubusercontent.com/47727946/202067052-4f931fa5-dcd1-4b40-9054-a99f30f60778.mp4
+
 
 
 
