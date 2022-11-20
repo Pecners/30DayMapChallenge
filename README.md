@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 19—Globe](R/day_19_globe)
+
+![Congaree National Park](plots/day_19/final_inset.png)
+
 ## [Day 14—Hexagon (2nd Submission)](R/day_14_hexagon)
 
 
