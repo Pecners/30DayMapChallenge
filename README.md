@@ -6,7 +6,9 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 ## [Day 21—Kontur Population Data](R/day_21_kontur)
 
-## [Day 21—Wisconsin Population Density](plots/day_21/title_wi_pop.png)
+![Wisconsin Population Density](plots/day_21/titled_wi_pop.png)
+
+## [Day 20—My favorite...](https://github.com/Pecners/rayshader_portraits/tree/main/R/portraits/mount_katmai)
 
 ![The Aleutian Mountain Range at Mount Katmai](plots/day_20/mount_katmai_titled_acadia_insta_small.png)
 
