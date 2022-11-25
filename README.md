@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 25—Two Colors](R/day_25_two_colors)
+
+![Mississippi River Population Density](plots/day_25/titled_miss_pop.png)
+
 ## [Day 21—Kontur Population Data](R/day_21_kontur)
 
 ![Wisconsin Population Density](plots/day_21/titled_wi_pop.png)
