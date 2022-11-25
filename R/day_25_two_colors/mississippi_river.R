@@ -202,7 +202,7 @@ img |>
                  location = "+200+100", font = "El Messiri",
                  color = alpha(text_color, .5),
                  size = 60, weight = 700) |> 
-  image_composite(image_modulate(f_image, brightness = 60, saturation = 60) |> 
+  image_composite(image_modulate(f_image, brightness = 75, saturation = 50) |> 
                     image_scale("50%x"), 
                   gravity = "south", 
                   offset = "-1500+1000") |> 
