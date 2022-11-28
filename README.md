@@ -4,6 +4,11 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 26—Islands](R/day_26_islands)
+
+![Dense Areas of America](plots/day_26/titled_top10.png)
+
+
 ## [Day 25—Two Colors](R/day_25_two_colors)
 
 ![Mississippi River Population Density](plots/day_25/titled_miss_pop.png)
