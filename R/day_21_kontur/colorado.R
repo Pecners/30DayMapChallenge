@@ -124,7 +124,8 @@ dev.off()
 svg_tmp <- image_read(tmp)
 svg_tmp
 
-f_image <- image_blank(width = image_info(svg_tmp)$width * 1.5, height = image_info(svg_tmp)$height * 1.5, color = "none") |> 
+f_image <- image_blank(width = image_info(svg_tmp)$width * 1.5, 
+                       height = image_info(svg_tmp)$height * 1.5, color = "none") |> 
   image_composite(svg_tmp, operator = "plus", gravity = "center") |> 
   image_annotate(gravity = "north", text = "N", font = "El Messiri", 
                  size = 200, weight = 700,
@@ -138,22 +139,24 @@ f_image
 
 img <- image_read(outfile)
 
+text_color <- darken(colors[3], .5)
+
 img |> 
-  image_crop(geometry = "5500x4500+200+300", gravity = "west") |> 
-  image_annotate(text = "Wisconsin Population Density", gravity = "northeast",
+  image_crop(geometry = "6000x5000+0+100", gravity = "center") |> 
+  image_annotate(text = "Colorado Population Density", gravity = "northwest",
                  location = "+200+200", font = "El Messiri",
-                 color = colors[4],
+                 color = text_color,
                  size = 200, weight = 700) |> 
   image_annotate(text = "Data: Kontur Population Data", gravity = "southeast",
                  location = "+200+200", font = "El Messiri",
-                 color = alpha(colors[4], .5),
+                 color = alpha(text_color, .5),
                  size = 60, weight = 700) |> 
   image_annotate(text = "Graphic: Spencer Schien (@MrPecners)", gravity = "southeast",
                  location = "+200+100", font = "El Messiri",
-                 color = alpha(colors[4], .5),
+                 color = alpha(text_color, .5),
                  size = 60, weight = 700) |> 
   image_composite(image_modulate(f_image, saturation = 25) |> 
-                    image_scale("75%x"), 
-                  gravity = "south", 
-                  offset = "-1400+0") |> 
+                    image_scale("50%x"), 
+                  gravity = "southwest", 
+                  offset = "+100+100") |> 
   image_write("plots/day_21/titled_co_pop.png")
