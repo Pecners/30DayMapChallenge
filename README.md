@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 28-3D](R/day_28_3d)
+
+![Missouri River Population Density](plots/day_28/titled_miss_pop.png)
+
 ## [Day 26—Islands](R/day_26_islands)
 
 ![Dense Areas of America](plots/day_26/titled_top10.png)
