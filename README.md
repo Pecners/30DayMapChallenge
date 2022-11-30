@@ -4,6 +4,10 @@ This repo contains my contributions to [30DayMapChallenge2022](https://30daymapc
 
 # Contributions
 
+## [Day 30-Remix](R/day_30_remix)
+
+![Upheaval Dome](plots/day_30/titled_upheaval_dome.png)
+
 ## [Day 28-3D](R/day_28_3d)
 
 ![Missouri River Population Density](plots/day_28/titled_miss_pop.png)
@@ -73,7 +77,7 @@ https://user-images.githubusercontent.com/47727946/201817530-48bc8b81-1090-4833-
 
 ## [Day 3—Polygons](R/day_3_polygons)
 
-![Upheaval Domes](plots/day_3/titled_upheaval_dome.png)
+![Upheaval Dome](plots/day_3/titled_upheaval_dome.png)
 
 ## [Day 2—Lines](R/day_2_lines)
 
