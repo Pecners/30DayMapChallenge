@@ -1,0 +1,3 @@
+file 'R/Day 1 - Points/intro.mp4'
+file 'R/Day 1 - Points/main.mp4'
+file 'R/Day 1 - Points/end.mp4'
