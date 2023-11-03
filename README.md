@@ -10,4 +10,9 @@ This repo contains my contributions to [30DayMapChallenge2023](https://30daymapc
 
 # [Day 2 - Lines](R/day_2_lines)
 
+https://github.com/Pecners/30DayMapChallenge/assets/47727946/6079b881-9655-4b0e-80ca-07079fc2a6ae
+
 # [Day 1 - Points](R/day_1_points)
+
+https://github.com/Pecners/30DayMapChallenge/assets/47727946/8719c070-7984-4a36-ba9c-554ae25dd3ab
+
