@@ -8,7 +8,7 @@ library(magick)
 nps <- st_read("data/nps_boundary/nps_boundary.shp")
 
 np <- nps |> 
-  filter(UNIT_TYPE == "National Park") |> 
+  filter(UNIT_TYPE == "National Park" | str_detect(UNIT_NAME, "New River Gorge")) |> 
   select(name = UNIT_NAME,
          area = Shape_Area,
          state = STATE,
@@ -56,7 +56,7 @@ plots <- map(1:nrow(np_area), function(i) {
     st_bbox()
 
   t <- this_one |> 
-    mutate(name = str_remove(name, "National Park$")) |> 
+    mutate(name = str_remove(name, "National Park$|National Park and Preserve$")) |> 
     mutate(t = glue("{name}\n({state})")) |> 
     pull(t)
   
@@ -92,7 +92,7 @@ layout <- c(
   area(7, 1), area(7, 2), area(7, 3), area(7, 4), area(7, 5), area(7, 6), area(7, 7),
   area(8, 1), area(8, 2), area(8, 3), area(8, 4), area(8, 5), area(8, 6), area(8, 7),
   area(9, 1), area(9, 2), area(9, 3), area(9, 4), area(9, 5), area(9, 6), area(9, 7),
-  area(10, 2), area(10, 3), area(10, 5), area(10, 6),
+  area(10, 2), area(10, 3), area(10, 4), area(10, 5), area(10, 6),
   area(11, 3), area(11, 5)
 
 )
@@ -106,10 +106,10 @@ patch <- wrap_plots(
     plot.background = element_rect(fill = NA, color = NA)
   ))
 
-ggsave("plots/Day 3 - Polygons/final.png", patch,
+ggsave("plots/day_3_polygons/final.png", patch,
        w = 15 * fac, h = 25 * fac, bg = pal[1], limitsize = FALSE)
 
-img <- image_read("plots/Day 3 - Polygons/final.png")
+img <- image_read("plots/day_3_polygons/final.png")
 
 img |> 
   image_annotate(text = "US NATIONAL PARKS", 
@@ -127,11 +127,11 @@ img |>
                  size = 175,
                  kerning = 112,
                  color = pal[7]) |> 
-  image_write("plots/Day 3 - Polygons/final_titled.png")
+  image_write("plots/day_3_polygons/final_titled.png")
 
 
-img <- image_read("plots/Day 3 - Polygons/final_titled.png")
+img <- image_read("plots/day_3_polygons/final_titled.png")
 
 img |> 
   image_scale(geometry = "x1900") |> 
-  image_write("plots/Day 3 - Polygons/final_titled_small.png")
+  image_write("plots/day_3_polygons/final_titled_small.png")
