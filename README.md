@@ -4,7 +4,7 @@ This repo contains my contributions to [30DayMapChallenge2023](https://30daymapc
 
 # Contributions
 
-## [Day 3 - Polygons](R/Day 3 - Polygons)
+## [Day 3 - Polygons](R/day_3_polygons)
 
 ![Every US National Park](plots/Day 3 - Polygons/final_titled_small.png)
 
