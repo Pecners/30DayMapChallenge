@@ -4,6 +4,14 @@ This repo contains my contributions to [30DayMapChallenge2023](https://30daymapc
 
 # Contributions
 
+## [Day 6 -Asia](R/day_6_asia)
+
+![Wisconsin Hmong Population](plots/day_6_asia/final_titled_small.png)
+
+## [Day 4 - A Bad Map](R/day_4_bad_map)
+
+![Badwater Basin](plots/day_4_bad_map/final_small.png)
+
 ## [Day 3 - Polygons](R/day_3_polygons)
 
 ![Every US National Park](plots/day_3_polygons/final_titled_small.png)
