@@ -3,6 +3,7 @@ library(sf)
 library(glue)
 library(patchwork)
 library(NatParksPalettes)
+library(tigris)
 library(magick)
 
 nps <- st_read("data/nps_boundary/nps_boundary.shp")
@@ -14,6 +15,10 @@ np <- nps |>
          state = STATE,
          geometry) |> 
   st_transform(crs = 5070)
+
+states <- states() |> 
+  st_transform(crs = st_crs(np))
+
 
 np_max <- map_df(1:nrow(np), function(i) {
   this <- np[i,]
@@ -29,8 +34,18 @@ np_max <- map_df(1:nrow(np), function(i) {
     m <- h
   }
   
+  these_states <- st_intersection(states, this)
+  ts <- these_states |> 
+    pull(STUSPS)
+  
+  if (length(ts) > 1) {
+    ts <- paste0(ts, collapse = ", ")
+  }
+  
+  
   this |> 
-    mutate(max = m)
+    mutate(max = m,
+           state_lab = ts)
 }) |> 
   arrange(max)
 
@@ -43,7 +58,7 @@ radius <- np_max |>
 
 pal <- natparks.pals("Acadia", n = 11)
 
-fac <- 4
+fac <- 1
 
 plots <- map(1:nrow(np_area), function(i) {
   this_one <- np_area[i,]
@@ -57,7 +72,7 @@ plots <- map(1:nrow(np_area), function(i) {
 
   t <- this_one |> 
     mutate(name = str_remove(name, "National Park$|National Park and Preserve$")) |> 
-    mutate(t = glue("{name}\n({state})")) |> 
+    mutate(t = glue("{name}\n({state_lab})")) |> 
     pull(t)
   
   if (i / 6 == 1) {
@@ -82,6 +97,7 @@ plots <- map(1:nrow(np_area), function(i) {
              clip = "off", expand = 0)
 })
 
+# long
 layout <- c(
 
   area(2, 1), area(2, 2), area(2, 3), area(2, 4), area(2, 5), area(2, 6), area(2, 7),
@@ -97,6 +113,19 @@ layout <- c(
 
 )
 
+# wide
+layout <- c(
+  
+  area(2, 1), area(2, 2), area(2, 3), area(2, 4), area(2, 5), area(2, 6), area(2, 7), area(2, 8), area(2, 9),
+  area(3, 1), area(3, 2), area(3, 3), area(3, 4), area(3, 5), area(3, 6), area(3, 7), area(3, 8), area(3, 9),
+  area(4, 1), area(4, 2), area(4, 3), area(4, 4), area(4, 5), area(4, 6), area(4, 7), area(4, 8), area(4, 9),
+  area(5, 1), area(5, 2), area(5, 3), area(5, 4), area(5, 5), area(5, 6), area(5, 7), area(5, 8), area(5, 9),
+  area(6, 1), area(6, 2), area(6, 3), area(6, 4), area(6, 5), area(6, 6), area(6, 7), area(6, 8), area(6, 9),
+  area(7, 1), area(7, 2), area(7, 3), area(7, 4), area(7, 5), area(7, 6), area(7, 7), area(7, 8), area(7, 9),
+  area(8, 1), area(8, 2), area(8, 3), area(8, 4), area(8, 5), area(8, 6), area(8, 7), area(8, 8), area(8, 9)
+
+)
+
 patch <- wrap_plots(
   plots,
   design = layout, 
@@ -106,28 +135,29 @@ patch <- wrap_plots(
     plot.background = element_rect(fill = NA, color = NA)
   ))
 
-ggsave("plots/day_3_polygons/final.png", patch,
-       w = 15 * fac, h = 25 * fac, bg = pal[1], limitsize = FALSE)
+ggsave("plots/day_3_polygons/final_wide.png", patch,
+       w = 15, h = 15, bg = pal[1], limitsize = FALSE)
 
-img <- image_read("plots/day_3_polygons/final.png")
+# img <- image_read("plots/day_3_polygons/final.png")
+img <- image_read("plots/day_3_polygons/final_wide.png")
 
 img |> 
   image_annotate(text = "US NATIONAL PARKS", 
                  gravity = "north", 
-                 location = "+0+1000",
+                 location = "+0+200",
                  font = "Poller One",
-                 size = 750,
-                 kerning = 300,
+                 size = 175,
+                 kerning = 100,
                  color = pal[8]) |> 
   image_annotate(text = glue("Graphic by Spencer Schien (@MrPecners) | ",
                              "Data from the National Park Service"),
                  gravity = "north",
-                 location = "+0+1800",
+                 location = "+0+400",
                  font = "El Messiri",
-                 size = 175,
-                 kerning = 112,
+                 size = 50,
+                 kerning = 29,
                  color = pal[7]) |> 
-  image_write("plots/day_3_polygons/final_titled.png")
+  image_write("plots/day_3_polygons/final_wide_titled.png")
 
 
 img <- image_read("plots/day_3_polygons/final_titled.png")
